@@ -426,8 +426,46 @@ Esto evita repetir navbar y footer en cada pagina.
 ## Preguntas de reflexion
 
 1. ¿Que ventaja tiene usar Bootstrap vs escribir CSS manualmente?
+
+RESPUESTA:
+
+Bootstrap permite crear interfaces rápidas y profesionales usando clases ya diseñadas, sin tener que escribir mucho CSS desde cero.
+
+Ventajas principales:
+
+Ahorra mucho tiempo de desarrollo.
+Tiene diseño responsive automático (se adapta a celular, tablet y PC).
+Componentes listos como botones, formularios y menús.
+Diseño consistente sin esfuerzo.
+
 2. ¿Como ayuda template herencia a mantener el codigo limpio?
+
+RESPUESTA:
+
+La herencia de templates permite crear una plantilla base (por ejemplo base.html) y reutilizarla en otras páginas.
+
+Esto ayuda porque:
+
+Evita repetir código como menús o headers.
+
+Hace más fácil mantener el sitio (cambias una sola vez y se actualiza todo).
+
+Organiza mejor el proyecto.
+
 3. ¿Que otras mejoras visuales podrias hacer?
+
+RESPUESTA:
+
+Algunas mejoras posibles son:
+
+Agregar una barra de navegación (navbar).
+Usar tarjetas (cards) para mostrar información.
+Mejorar colores y tipografía con Bootstrap.
+Agregar iconos (Font Awesome).
+Hacer el diseño completamente responsive.
+Incluir animaciones suaves o transiciones.
+Agregar modo oscuro (dark mode).
+
 
 ## Entregable
 

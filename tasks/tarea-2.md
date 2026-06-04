@@ -131,9 +131,28 @@ Edad: 25
 ## Preguntas de reflexion
 
 1. ¿Cual es la diferencia entre escribir datos en HTML vs guardarlos en variables Python?
+
+RESPUESTA:
+
+Los datos escritos en HTML son estáticos y deben modificarse manualmente. Las variables Python permiten cambiar la información desde un solo lugar y enviarla dinámicamente a la página.
+
 2. Si el profesor cambia mañana, ¿cuantos archivos necesitas editar con este enfoque?
+
+RESPUESTA:
+
+Solo un archivo, app.py, donde está guardada la variable del profesor.
+
 3. ¿Que ventaja tiene usar `{{ }}` en lugar de escribir texto fijo?
+
+RESPUESTA:
+
+Permite mostrar datos dinámicos enviados desde Python, haciendo la aplicación más flexible y fácil de mantener.
+
 4. ¿Donde se ejecuta Jinja2: en la computadora del usuario o en el servidor?
+
+RESPUESTA:
+
+Jinja2 se ejecuta en el servidor. Flask genera el HTML completo y luego lo envía al navegador del usuario.
 
 ## Entregable
 

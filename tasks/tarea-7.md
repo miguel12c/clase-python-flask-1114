@@ -305,9 +305,41 @@ if 'usuario_id' not in session:
 ## Preguntas de reflexion
 
 1. ¿Por que nunca debes guardar contraseñas en texto plano?
+
+RESPUESTA:
+
+Porque si la base de datos es robada o filtrada, cualquier persona podría ver las contraseñas directamente.
+Por seguridad, las contraseñas deben guardarse encriptadas (hasheadas) usando algoritmos como bcrypt o hashlib, para que no se puedan leer directamente.
+
 2. ¿Que diferencia hay entre crear un Usuario y loguear?
+
+RESPUESTA:
+
+Crear un usuario (registro): Se guarda la información del usuario en la base de datos (nombre, email, contraseña).
+
+Loguear (inicio de sesión): Se verifica si el usuario existe y si la contraseña ingresada coincide con la almacenada.
+
 3. ¿Como protegeria la ruta `/estudiantes` para que solo profesor pueda verla?
 
+RESPUESTA:
+
+Se puede proteger usando autenticación y roles. Por ejemplo:
+
+Verificar si el usuario está logueado (session o Flask-Login).
+Comprobar si tiene rol de “profesor”.
+Si no cumple, redirigir o mostrar error 403.
+
+Ejemplo simple en Flask:
+
+from flask import session, redirect, url_for
+
+@app.route("/estudiantes")
+def estudiantes():
+    if not session.get("rol") == "profesor":
+        return redirect(url_for("inicio"))
+    return render_template("estudiantes.html")
+
+    
 ## Entregable
 
 Debes mostrar:
@@ -327,3 +359,4 @@ Ahora tienes **Autenticacion funcional**. Profesor y Estudiantes ven cosas difer
 
 En la siguiente tarea, vamos a agregar **permisos y CRUD**: crear, leer, editar y eliminar tareas.
 
+RESPUESTA:

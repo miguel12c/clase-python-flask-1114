@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clase Flask 1114</title>
-  </head>
-  <body>
-    <!--
-      Esta pagina es muy simple a proposito.
-      La idea es que el alumno pueda leerla sin perderse.
-    -->
+<head>
+    <meta charset="UTF-8">
+    <title>Portal {{ profesor }}</title>
 
-    <h1>Bienvenidos a la clase del profe Henry by Kyrbot</h1>
+    <style>
+        body{
+            font-family: Arial;
+            margin: 0;
+            background: #f4f6f9;
+        }
 
-    <p>
-      Si estas viendo esto, ya diste un primer paso en programacion: tu
-      aplicacion esta corriendo y Flask pudo mostrar una pagina HTML.
-    </p>
+        nav{
+            background: #1f4e79;
+            padding: 15px;
+        }
 
-    <p>
-      Hoy empezamos simple, pero con una idea poderosa: cada gran programa
-      arranca con una primera linea de codigo. Este puede ser el comienzo de
-      algo enorme.
-    </p>
+        nav a{
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    <hr />
+        nav a:hover{
+            text-decoration: underline;
+        }
 
-    <p>Primer objetivo cumplido: crear el entorno y levantar el servidor.</p>
+        .container{
+            padding: 20px;
+        }
 
-    <p>
-      Ahora este proyecto empieza a convertirse en un Mini Portal de Clase
-      Flask. En la tarea 3 vas a crear nuevas paginas y conectarlas con rutas.
-    </p>
-  </body>
+        .card{
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        h1{
+            color: #1f4e79;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/">Inicio</a>
+    <a href="/informacion">Informacion</a>
+    <a href="/recursos">Recursos</a>
+    <a href="/tareas">Tareas</a>
+</nav>
+
+<div class="container">
+
+    <h1>Bienvenidos al Portal de Clase 1114</h1>
+
+    <div class="card">
+        <h2>Información general</h2>
+
+        <p><strong>Profesor:</strong> {{ profesor }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Horario:</strong> {{ horario }}</p>
+        <p><strong>Aula:</strong> {{ aula }}</p>
+        <p><strong>Descripción:</strong> {{ descripcion }}</p>
+        <p><strong>Estudiante:</strong> Cathalina Murcia</p>
+    </div>
+
+</div>
+
+</body>
 </html>

@@ -311,8 +311,49 @@ if session['rol'] != 'profesor':
 ## Preguntas de reflexion
 
 1. ¿Que diferencia hay entre Create, Read, Update, Delete?
+
+RESPUESTA:
+
+CRUD es el conjunto de operaciones básicas en bases de datos:
+
+Create (Crear): agregar nuevos registros (ej: crear una tarea).
+
+Read (Leer): obtener o ver datos (ej: listar tareas).
+
+Update (Actualizar): modificar datos existentes (ej: cambiar el nombre de una tarea).
+
+Delete (Eliminar): borrar registros (ej: eliminar una tarea).
+
 2. ¿Por que es importante tener ForeignKey entre Tarea y Usuario?
+
+RESPUESTA:
+
+Porque permite relacionar los datos.
+
+Una ForeignKey conecta una tarea con el usuario que la creó. Esto sirve para:
+
+Saber quién creó cada tarea.
+Filtrar tareas por usuario.
+Mantener la base de datos organizada y coherente.
+
 3. ¿Como protegearias la ruta de crear tarea para que solo profesor pueda?
+
+RESPUESTA:
+
+Se puede proteger usando autenticación y roles (por ejemplo con session o Flask-Login).
+
+Ejemplo simple:
+
+from flask import session, redirect, url_for
+
+@app.route("/crear-tarea", methods=["GET", "POST"])
+def crear_tarea():
+    if session.get("rol") != "profesor":
+        return redirect(url_for("inicio"))
+
+    # lógica para crear tarea
+    return render_template("crear_tarea.html")
+
 
 ## Entregable
 

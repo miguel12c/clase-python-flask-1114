@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tareas</title>
+
+    <style>
+        body{font-family:Arial; margin:0; background:#f4f6f9;}
+        nav{background:#1f4e79; padding:15px;}
+        nav a{color:white; margin-right:15px; text-decoration:none; font-weight:bold;}
+        .container{padding:20px;}
+        .card{background:white; padding:20px; border-radius:10px; margin-top:20px;}
+        h1{color:#1f4e79;}
+        .tarea{
+            padding:10px;
+            border-bottom:1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/">Inicio</a>
+    <a href="/informacion">Informacion</a>
+    <a href="/recursos">Recursos</a>
+    <a href="/tareas">Tareas</a>
+</nav>
+
+<div class="container">
+
+    <h1>Tareas del Curso</h1>
+
+    <div class="card">
+
+       <table border="1">
+    <thead>
+        <tr>
+            <th>Numero</th>
+            <th>Titulo</th>
+            <th>Fecha entrega</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tarea in tareas %}
+        <tr>
+            <td>{{ tarea.numero }}</td>
+            <td>{{ tarea.titulo }}</td>
+            <td>{{ tarea.fecha }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -233,8 +233,27 @@ uno = Estudiante.query.filter_by(nombre="Ana").first()  # Un resultado
 ## Preguntas de reflexion
 
 1. ¿Que es un ORM y por que simplifica trabajar con bases de datos?
+
+RESPUESTA:
+
+Un ORM (Object Relational Mapper) es una herramienta que permite trabajar con bases de datos usando código de Python en lugar de escribir consultas SQL directamente.
+
+Simplifica el trabajo porque puedes manejar tablas como si fueran clases y registros como objetos, haciendo el código más fácil de leer y mantener.
+
 2. ¿Que diferencia hay entre `db.session.add()` y `db.session.commit()`?
+
+RESPUESTA:
+
+db.session.add() agrega un nuevo objeto a la sesión (prepara el dato para guardarse).
+
+db.session.commit() confirma los cambios y los guarda realmente en la base de datos.
+
 3. ¿Por que `unique=True` es importante en el email?
+
+RESPUESTA:
+
+Porque evita que existan dos usuarios con el mismo correo electrónico en la base de datos.
+Esto ayuda a mantener la integridad de los datos y evita duplicados en campos que deben ser únicos, como el email.
 
 ## Entregable
 
@@ -254,3 +273,4 @@ Ahora tienes una **Base de Datos funcional**. Los datos se guardan y persisten.
 
 En la siguiente tarea, vamos a agregar **Autenticacion**: Profesor y Estudiantes tendran login diferentes.
 
+RESPUESTA:

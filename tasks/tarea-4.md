@@ -128,8 +128,27 @@ En HTML:
 ## Preguntas de reflexion
 
 1. Si tienes 50 tareas en la lista, ¿cuantas lineas de HTML necesitas escribir?
+
+
+RESPUESTA:
+
+Solo necesitas escribir el bloque HTML del bucle una sola vez. El bucle recorrerá automáticamente las 50 tareas y generará el HTML correspondiente para cada una.
+
 2. ¿Que pasa si accedes a una propiedad que no existe, como `{{ tarea.profesor }}`?
+
+RESPUESTA:
+
+Jinja2 normalmente mostrará un valor vacío en lugar de generar un error visible en la página. Sin embargo, la información no aparecerá porque esa propiedad no existe dentro del objeto o diccionario tarea.
+
 3. ¿Como cambarias el bucle si quisieras mostrar solo las primeras 5 tareas?
+
+RESPUESTA:
+
+Puedes recorrer únicamente los primeros 5 elementos de la lista usando una porción (slice):
+
+{% for tarea in tareas[:5] %}
+    <li>{{ tarea.nombre }}</li>
+{% endfor %} 
 
 ## Entregable
 

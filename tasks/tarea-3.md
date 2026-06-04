@@ -205,8 +205,22 @@ def nombre_funcion():  # Que ocurre
 ## Preguntas de reflexion
 
 1. Si tienes 10 paginas diferentes, ¿cuantas funciones necesitas en app.py?
+
+RESPUESTA:
+
+Necesitas 10 funciones, una para cada ruta o página que quieras mostrar en la aplicación Flask.
+
 2. ¿Que pasa si cambias el nombre de una ruta pero no actualizas los links?
+
+RESPUESTA:
+
+Los enlaces dejarán de funcionar y el usuario verá un error 404 (Página no encontrada) porque el link apunta a una ruta que ya no existe.
+
 3. ¿Por que es importante tener un menu consistente en todas las paginas?
+
+RESPUESTA:
+
+Porque facilita la navegación del usuario, mejora la experiencia de uso y permite acceder fácilmente a cualquier sección del sitio desde cualquier página.
 
 ## Entregable
 
